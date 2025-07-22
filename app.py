@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # PostgreSQL connection string from Render
-DATABASE_URL = os.environ.get("postgresql://postgres:HashDrop@2000@localhost:5432/flutterdb")
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
 def get_db_connection():
     return psycopg2.connect(DATABASE_URL)
